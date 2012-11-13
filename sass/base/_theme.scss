@@ -43,18 +43,14 @@ ul {
 
 // Logo
 aside#logo {
-  background-color: red;
-}
-
-aside#logo div {
-  background-color: white;
+  margin-left: 13px;
 }
 
 aside#logo div a {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  background: red url(/images/star_large.png) center center no-repeat;
+  background: url(/images/dp.jpg) center center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -93,4 +89,63 @@ article h2 a:link, article h2 a:hover, article h2 a:visited, article h2 a:active
   line-height: 32px;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
+}
+
+@mixin square($property){
+  width: $property;
+  height: $property;
+}
+
+// https://github.com/shashankmehta/greyshade/blob/master/sass/parts/_header.scss
+.social {
+  float: left;
+  margin-right: 15px;
+  margin-left: 30px;
+  @media screen and (max-width: 1040px) {
+    float: none;
+    margin-right: 0;
+    a:last-of-type {
+      margin-right: 0;
+    }
+  }
+  a {
+    @include border-radius(50%);
+    @include inline-block;
+    text-indent: -9999px;
+    margin-right: 15px;
+    opacity: 0.5;
+    @include square(28px);
+    @include transition(0.3s);
+    &:hover {
+      opacity: 1;
+    }
+    &.facebook {
+      background: image-url('social/facebook.png') center no-repeat #3B5998;
+      border: 1px solid #3B5998;
+      &:hover {
+        border: 1px solid darken(#3B5998, 10%);
+      }
+    }
+    &.twitter {
+      background: image-url('social/twitter.png') center no-repeat #55CFF8;
+      border: 1px solid #55CFF8;
+      &:hover {
+        border: 1px solid darken(#55CFF8, 10%);
+      }
+    }
+    &.github {
+      background: image-url('social/github.png') center no-repeat rgb(175,182,202);
+      border: 1px solid rgb(175,182,202);
+      &:hover {
+        border: 1px solid darken(rgb(175,182,202), 10%);
+      }
+    }
+    &.rss {
+      background: image-url('social/rss.png') center no-repeat #EF7522;
+      border: 1px solid #EF7522;
+      &:hover {
+        border: 1px solid darken(#EF7522, 10%);
+      }
+    }
+  }
 }
