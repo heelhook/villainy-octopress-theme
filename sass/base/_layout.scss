@@ -87,6 +87,10 @@ ul#menu li.title {
   margin-bottom: 0;
 }
 
+ul#menu li.author {
+  margin-top: -20px;
+}
+
 ul#menu li.subtitle {
   margin-top: 0;
 }
@@ -134,7 +138,18 @@ header#sidebar h1#title a {
   margin-left: 0;
 }
 
+header#sidebar h2#author {
+  font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1em;
+  color: #777777;
+  -webkit-font-smoothing: antialiased;
+  max-width: none;
+}
+
 header#sidebar h2#subtitle {
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 23px;
@@ -296,18 +311,31 @@ article.post {
 }
 
 section.comments {
-  width: auto;
+  width: 700px;
   position: relative;
   padding-left: 50px;
   overflow-x: hidden;
 }
 
-article.post h2, article.post p {
+article.post h2 {
+  max-width: 700px;
+}
+
+article.post p {
   max-width: 500px;
+  font-family: HelveticaNeue-Light, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
 article.post figure {
-  max-width: 500px;
+  max-width: 700px;
+}
+
+article.post .meta {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1em;
+  color: #aaaaaa;
 }
 
 // Anchor

@@ -46,7 +46,7 @@ aside#logo div a {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  background: url(/images/dp.jpg) center center no-repeat;
+  background: url(/images/me.jpg) center center no-repeat;
   background-size: 100% 100%;
 }
 
@@ -69,9 +69,9 @@ article a:link, article a:visited, article a:hover, article a:active {
 article h2 {
   color: black;
   text-decoration: none;
-  font-family: "Rokkitt", serif;
-  font-size: 22px;
-  line-height: 32px;
+  font-family: HelveticaNeue-CondensedBold, HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-size: 3em;
+  line-height: 1.25em;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
 }
@@ -80,9 +80,8 @@ article h2 a:link, article h2 a:hover, article h2 a:visited, article h2 a:active
   color: black;
   text-decoration: none;
   border-bottom: 1px solid #CCC;
-  font-family: "Rokkitt", serif;
-  font-size: 22px;
-  line-height: 32px;
+  font-family: HelveticaNeue-CondensedBold, HelveticaNeue, Helvetica, Arial, sans-serif;
+  line-height: 1.25em;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
 }
@@ -127,6 +126,13 @@ article h2 a:link, article h2 a:hover, article h2 a:visited, article h2 a:active
       border: 1px solid #55CFF8;
       &:hover {
         border: 1px solid darken(#55CFF8, 10%);
+      }
+    }
+    &.linkedin {
+      background: image-url('social/linkedin.png') center no-repeat #005A87;
+      border: 1px solid #005A87;
+      &:hover{
+        border: 1px solid darken(#005A87, 10%);
       }
     }
     &.github {
